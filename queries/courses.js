@@ -76,7 +76,9 @@ export async function getCourseDetails(id) {
 
 export async function getCourseDetailsByInstructor(instructorId) {
    // db call
-   await dbConnect();
+   const conn = await dbConnect();
+   
+   console.log(conn);
    
    const courses = await Course.find({ instructor: instructorId }).lean();
 

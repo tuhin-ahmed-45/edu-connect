@@ -1,5 +1,6 @@
 import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
+import { dbConnect } from "@/service/dbConnect";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 
@@ -15,7 +16,10 @@ export const metadata = {
    description: "World's Best Learning Platform",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+   const cnn = await dbConnect()
+   console.log(cnn);
+   
    return (
       <html lang="en">
          <body className={cn(inter.className, poppins.className)}>
