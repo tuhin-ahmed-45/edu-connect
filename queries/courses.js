@@ -7,9 +7,9 @@ import { Course } from "@/model/course-model";
 import { Module } from "@/model/module-model";
 import { Testimonial } from "@/model/testimonial-model";
 import { User } from "@/model/user-model";
+import dbConnect from "@/service/dbConnect";
 import { getEnrollmentsForCourse } from "./enrollments";
 import { getTestimonialsForCourse } from "./testimonials";
-import dbConnect from "@/service/dbConnect";
 
 export async function getCourseList() {
    // DB connection call
@@ -77,8 +77,6 @@ export async function getCourseDetails(id) {
 export async function getCourseDetailsByInstructor(instructorId) {
    // db call
    const conn = await dbConnect();
-   
-   console.log(conn);
    
    const courses = await Course.find({ instructor: instructorId }).lean();
 

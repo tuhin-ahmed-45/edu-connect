@@ -10,7 +10,6 @@ const SingleCoursePage = async ({ params }) => {
    const { id } = await params;
 
    const course = await getCourseDetails(id);
-   console.log("Course Detail :", course);
    return (
       <>
          <CourseDetailsIntro
