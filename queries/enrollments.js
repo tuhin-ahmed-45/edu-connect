@@ -1,7 +1,7 @@
 import { Enrollment } from "@/model/enrollment-model";
 
 import { replaceMongoIdInArray } from "@/lib/convertData";
-import { dbConnect } from "@/service/dbConnect";
+import dbConnect from "@/service/dbConnect";
 
 export async function getEnrollmentsForCourse(courseId) {
    // db connection call

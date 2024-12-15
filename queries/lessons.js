@@ -1,6 +1,6 @@
 import { replaceMongoIdInObject } from "@/lib/convertData";
 import { Lesson } from "@/model/lesson-model";
-import { dbConnect } from "@/service/dbConnect";
+import dbConnect from "@/service/dbConnect";
 
 export async function getLesson(lessonId) {
    // DB call
