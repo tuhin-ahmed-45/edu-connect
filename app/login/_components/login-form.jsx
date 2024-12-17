@@ -14,6 +14,7 @@ import { Label } from "@/components/ui/label";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import SocialLogins from "./social-logins";
 
 export function LoginForm() {
   const [error, setError] = useState('')
@@ -52,7 +53,7 @@ export function LoginForm() {
                 id="email"
                 type="email"
                 name="email"
-                placeholder="m@example.com"
+                placeholder="tuhin@example.com"
                 required
               />
             </div>
@@ -63,14 +64,14 @@ export function LoginForm() {
                 Forgot your password?
               </Link> */}
               </div>
-              <Input id="password" name="password" type="password" required />
+              <Input id="password" name="password" type="password" placeholder="Your password" required />
             </div>
             <Button type="submit" className="w-full">
               Login
             </Button>
           </div>
         </form>
-
+        <SocialLogins />
         <div className="mt-4 text-center text-sm">
           Don&apos;t have an account?{" "}
           <p>

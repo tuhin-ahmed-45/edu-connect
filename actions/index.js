@@ -11,8 +11,15 @@ export const credentialsLogin = async (formData) => {
 
       return res;
    } catch (error) {
-    console.log(error?.message);
-    
+      console.log(error?.message);
+
       throw new Error(error?.message);
    }
+};
+
+// For social login
+
+export const doSocialLogin = async (formData) => {
+   const action = formData.get("action");
+   await signIn(action, { redirectTo: "/courses" });
 };
