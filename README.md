@@ -27,7 +27,7 @@ Edu Connect is a modern web application built using Next.js 14, TailwindCSS, Sha
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/edu-connect.git
+   git clone https://github.com/tuhin-ahmed-45/edu-connect.git
    cd edu-connect
    ```
 
@@ -41,10 +41,12 @@ Edu Connect is a modern web application built using Next.js 14, TailwindCSS, Sha
 3. Set up environment variables:
    Create a `.env.local` file in the root of your project and configure the following variables:
    ```env
-   NEXTAUTH_URL=http://localhost:3000
-   NEXTAUTH_SECRET=your_secret
-   STRIPE_PUBLIC_KEY=your_stripe_public_key
-   STRIPE_SECRET_KEY=your_stripe_secret_key
+   MONGO_URI=mongodb+srv://mdtuhindev:Jlc2AYiMVFwi1DJi@khanakhazana.yiunqqx.mongodb.net/educonnect
+   AUTH_SECRET=CY3bu_PAtMFgzkJj7mrsQQqPuYw6
+   GOOGLE_CLIENT_SECRET=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
+   
+   ## github keys
+   GITHUB_CLIENT_SECRET=86232d0b339e841e642504f6f3e6599f9d33104f
    ```
 
 4. Run the development server:
