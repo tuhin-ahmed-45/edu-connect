@@ -28,11 +28,17 @@ export function SignupForm({ role }) {
       const email = formData.get("email");
       const password = formData.get("password");
       const userRole = ((role === "student" || role === "instructor")) ? role : "student";
-
+      console.log({
+        firstName,
+        lastName,
+        email,
+        password,
+        userRole,
+      })
       const response = await fetch("/api/register", {
         method: "POST",
         headers: {
-          "content-type": "application/json"
+          "Content-type": "application/json"
         },
         body: JSON.stringify({
           firstName,
@@ -42,6 +48,8 @@ export function SignupForm({ role }) {
           userRole,
         }),
       });
+
+      console.log("Response: ", response);
 
       if (response.status === 201) {
         router.push("/login");

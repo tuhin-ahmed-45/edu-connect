@@ -126,35 +126,35 @@ export const {
       signIn: "/auth/signin", // Optional: Custom sign-in page
    },
    // JWT token
-   callbacks: {
-      async jwt({ token, user, account }) {
-         console.log("Inside JWT callback:", { token, user, account });
+   // callbacks: {
+   //    async jwt({ token, user, account }) {
+   //       console.log("Inside JWT callback:", { token, user, account });
 
-         if (account && user) {
-            console.log("New Token from Account:", account);
-            return {
-               accessToken: account.access_token,
-               accessTokenExpires: Date.now() + account.expires_in * 1000,
-               refreshToken: account.refresh_token, // For Google
-               user,
-            };
-         }
+   //       if (account && user) {
+   //          console.log("New Token from Account:", account);
+   //          return {
+   //             accessToken: account.access_token,
+   //             accessTokenExpires: Date.now() + account.expires_in * 1000,
+   //             refreshToken: account.refresh_token, // For Google
+   //             user,
+   //          };
+   //       }
 
-         if (Date.now() < token.accessTokenExpires) {
-            console.log("Using Existing Token:", token);
-            return token;
-         }
+   //       if (Date.now() < token.accessTokenExpires) {
+   //          console.log("Using Existing Token:", token);
+   //          return token;
+   //       }
 
-         console.log("Access Token Expired. Refreshing...");
-         return refreshAccessToken(token);
-      },
+   //       console.log("Access Token Expired. Refreshing...");
+   //       return refreshAccessToken(token);
+   //    },
 
-      async session({ session, token }) {
-         session.user = token?.user;
-         session.accessToken = token?.access_token;
-         session.error = token?.error;
-         console.log(`Returning Session ${JSON.stringify(session)}`);
-         return session;
-      },
-   },
+   //    async session({ session, token }) {
+   //       session.user = token?.user;
+   //       session.accessToken = token?.access_token;
+   //       session.error = token?.error;
+   //       console.log(`Returning Session ${JSON.stringify(session)}`);
+   //       return session;
+   //    },
+   // },
 });

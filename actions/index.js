@@ -8,7 +8,8 @@ export const credentialsLogin = async (formData) => {
          password: formData?.get("password"),
          redirect: false,
       });
-
+      console.log("response :", res);
+      
       return res;
    } catch (error) {
       console.log(error?.message);
