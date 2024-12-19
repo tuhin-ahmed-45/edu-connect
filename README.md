@@ -1,34 +1,81 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Edu Connect
 
-## Getting Started
+Edu Connect is a modern web application built using Next.js 14, TailwindCSS, Shadcn UI, and NextAuth v5 for authentication. It is designed to connect students, educators, and institutions seamlessly while integrating Stripe for payment functionalities.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- **Authentication**: Secure user authentication with NextAuth v5 supporting multiple providers.
+- **Modern UI**: Built with TailwindCSS and Shadcn UI for a sleek and responsive interface.
+- **Payment Integration**: Stripe for secure and seamless payment handling.
+- **Optimized Performance**: Leveraging the latest features of Next.js 14.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Framework**: [Next.js 14](https://nextjs.org/)
+- **Styling**: [TailwindCSS](https://tailwindcss.com/), [Shadcn UI](https://shadcn.dev/)
+- **Authentication**: [NextAuth v5](https://next-auth.js.org/)
+- **Payments**: [Stripe](https://stripe.com/)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Installation
 
-## Learn More
+### Prerequisites
 
-To learn more about Next.js, take a look at the following resources:
+- Node.js (>= 18)
+- npm or yarn
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Steps
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/tuhin-ahmed-45/edu-connect.git
+   cd edu-connect
+   ```
 
-## Deploy on Vercel
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Set up environment variables:
+   Create a `.env.local` file in the root of your project and configure the following variables:
+   ```env
+   MONGO_URI=mongodb+srv://mdtuhindev:Jlc2AYiMVFwi1DJi@khanakhazana.yiunqqx.mongodb.net/educonnect
+   AUTH_SECRET=CY3bu_PAtMFgzkJj7mrsQQqPuYw6
+   GOOGLE_CLIENT_SECRET=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
+   
+   ## github keys
+   GITHUB_CLIENT_SECRET=86232d0b339e841e642504f6f3e6599f9d33104f
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4. Run the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+   Visit [http://localhost:3000](http://localhost:3000) to view the app.
+
+## Contributing
+
+Contributions are welcome! To get started:
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature-name`.
+3. Make your changes and commit them: `git commit -m 'Add new feature'`.
+4. Push to the branch: `git push origin feature-name`.
+5. Open a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Acknowledgments
+
+- [Next.js](https://nextjs.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Shadcn UI](https://shadcn.dev/)
+- [NextAuth](https://next-auth.js.org/)
+- [Stripe](https://stripe.com/)
