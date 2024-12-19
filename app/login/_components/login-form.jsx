@@ -14,7 +14,6 @@ import { Label } from "@/components/ui/label";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import SocialLogins from "./social-logins";
 
 export function LoginForm() {
   const [error, setError] = useState('')
@@ -71,7 +70,7 @@ export function LoginForm() {
             </Button>
           </div>
         </form>
-        <SocialLogins />
+        {/* <SocialLogins /> */}
         <div className="mt-4 text-center text-sm">
           Don&apos;t have an account?{" "}
           <p>

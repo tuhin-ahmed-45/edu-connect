@@ -86,7 +86,7 @@ export function SignupForm({ role }) {
                 id="email"
                 name="email"
                 type="email"
-                placeholder="m@example.com"
+                placeholder="tuhin@example.com"
                 required
               />
             </div>
