@@ -75,8 +75,6 @@ export async function getCourseDetails(id) {
 }
 
 export async function getCourseDetailsByInstructor(instructorId) {
-   // db call
-   const conn = await dbConnect();
    
    const courses = await Course.find({ instructor: instructorId }).lean();
 
@@ -89,9 +87,9 @@ export async function getCourseDetailsByInstructor(instructorId) {
       })
    );
 
-   const totalEnrollments = enrollments.reduce((item, currentValue) => {
-      return item.length + currentValue.length;
-   });
+   const totalEnrollments = enrollments.reduce(function (acc, obj) {
+      return acc + obj.length;
+   }, 0);
 
    const testimonials = await Promise.all(
       courses.map(async (course) => {

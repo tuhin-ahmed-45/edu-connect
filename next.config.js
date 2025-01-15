@@ -1,11 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
    images: {
-      domains: [
-         "i.pravatar.cc",      // First domain
-         "avatars.githubusercontent.com",  // Second domain
-         
-     ],
+      remotePatterns: [
+         {
+            protocol: 'https',
+            hostname: 'i.pravatar.cc',
+         },
+         {
+            protocol: 'https',
+            hostname: 'avatars.githubusercontent.com',
+         },
+      ],
    },
    env: {
       MONGO_URI: process.env.MONGO_URI,

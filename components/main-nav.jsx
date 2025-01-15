@@ -84,14 +84,18 @@ export function MainNav({ items, children }) {
 
 				<DropdownMenu>
 					<DropdownMenuTrigger asChild>
-						<div className="cursor-pointer">
+						<div className="cursor-pointer flex items-center gap-2">
+							<div>
+								<h2 className="">{session?.user?.name}</h2>
+							</div>
 							<Avatar>
 								<AvatarImage
-									src="https://github.com/shadcn.png"
-									alt="@shadcn"
+									src={session?.user?.image || "https://github.com/shadcn.png"}
+									alt={session?.user?.name || "User"}
 								/>
 								<AvatarFallback>CN</AvatarFallback>
 							</Avatar>
+							
 						</div>
 					</DropdownMenuTrigger>
 					<DropdownMenuContent align="end" className="w-56 mt-4">
