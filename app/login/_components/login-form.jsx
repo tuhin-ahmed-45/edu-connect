@@ -1,6 +1,6 @@
 'use client'
 
-import { credentialsLogin } from "@/actions";
+import { credentialsLogin } from "@/actions/auth";
 import { Button } from "@/components/ui/button";
 import {
   Card,
